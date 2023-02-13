@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <META http-equiv="refresh" content="">
+    <link rel="stylesheet" href="nstyle.css">
+    <script src="https://kit.fontawesome.com/069038d3c8.js" crossorigin="anonymous"></script>
+    <title>HOME</title>
+
+</head>
+<section  class="header">
+<nav>
+    <h1>ABOUT</h1>
+    <h1>ABOUT</h1>
+    <div class="container">
+
+        <ul>
+            
+        <li>
+            <a href="home.html">HOME</a>
+        </li>
+        <li>
+            <a href="services.html">SERVICES</a>
+        </li>
+        <li>
+            <a href="about.html" style="font-size: 20px;"> ABOUT</a>
+        </li>
+    </ul>
+
+</div>
+
+</nav>
+
+</section>
+
+<body class="cbox">
+    <div class="commentbox">
+        <h2>Email me</h2>
+        <form action="#">
+            <input  type="text" name="fullname" style="color: blue;"placeholder="Name"><br>
+            <input type="Email" name="Email Address" placeholder="Email Address"><br>
+            <textarea name="comment"
+             placeholder="Type your Comment here"></textarea><br>
+            <button id="btn"><b> Submit</b></button>
+        </form>
+    </div>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        var btn = document.getElementById('btn');
+        btn.addEventListener('click',function(e){
+            e.preventDefault()
+            var name = document.getElementById('fullname').value;
+            var email = document.getElementById('Email Address').value;
+            var comment = document.getElementById('comment').value;
+
+
+            Email.send({
+    Host : "smtp.gmail.com",
+    Username : "jladvincula1212@gmail.com",
+    Password : "qhplrsfomoutzkmi",
+    To : 'jladvincula1212@gmail.com',
+    From : email,
+    Subject : "from sample html",
+    Body :comment
+}).then(
+  message => alert(message)
+);
+        })
+    </script>
+</body>
+<footer>
+    <h3>FOLLOW ME</h3><br>
+    <div class="aicon">
+        <ul>
+            <li>
+                <a href="http://www.facebook.com">
+                <i class="fa-brands fa-facebook"></i>
+                <img src="facebook2.png">
+                </li></a>
+                <li>
+                    <a href="http://www.youtube.com">
+                    <i class="fa-brands fa-youtube"></i>
+                    <img src="youtube2.png">
+                 </li></a>
+                <li>
+                    <a href="http://www.twitter.com">
+                    <i class="fa-brands fa-twitter"></i>
+                    <img src="twitter2.png"></a>
+                </li>
+                <li>
+                    <a href="http://www.instagram.com">
+                    <i class="fa-brands fa-instagram"></i>
+                    <img src="instagram2.png"></a>
+                </li>
+        </ul>
+        </div>
+        
+</footer>
+</html>

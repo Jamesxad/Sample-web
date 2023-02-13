@@ -1,0 +1,432 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-image:linear-gradient(rgb(228, 207, 207,0.5),rgb(245, 227, 227)),url(backgroundwall.jpg);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
+
+    
+}
+
+.header{
+    position: relative;
+    padding-top:30px;
+    min-height:70px;
+}
+/*header word with animation*/
+nav h1{
+    
+    font-family: fantasy;
+    font-size: 100px;
+    border-radius: 80%;
+    box-shadow: 0 0 5px white;
+    color: transparent;
+    border-radius:80%;
+    overflow: hidden;
+    transform: translateX(-50%),translateY(-50%);
+}
+nav h1:nth-child(1){
+    position: relative;
+    color: transparent;
+    
+
+}
+nav h1:nth-child(2){
+    position: absolute;
+    color: white;
+    animation: back 5s ease-in-out infinite;
+
+}
+@keyframes back
+{
+    0%,100%
+    {
+        clip-path: polygon(0 29%, 16% 39%, 28% 44%, 42% 49%, 54% 53%, 69% 54%,
+         83% 54%, 91% 53%, 100% 60%, 100% 99%, 1% 98%);
+    }
+    50%
+    {
+        clip-path: polygon(1% 57%, 12% 51%, 29% 45%, 44% 40%, 59% 39%, 75% 35%,
+         83% 36%, 94% 35%, 100% 31%, 100% 99%, 1% 98%);
+    }
+}
+
+
+nav{
+    justify-content: space-between;
+    display: flex; 
+    padding:2% 6%;
+    align-items: center;
+    margin-left: 2%;
+   
+}
+.container{
+
+    text-align: right;
+}
+.container ul li{
+    display: inline-block;
+    padding: 0px 10px;
+
+    
+
+}
+.container ul li a{
+    
+    text-decoration: none;
+    color: black;
+    font-family: fantasy;
+}
+.container ul li:after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: rgb(206, 197, 197);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.container ul li:hover:after{
+    width: 100%;
+
+}
+.container ul li a:hover{
+    -webkit-text-stroke: 0.5px rgb(209, 192, 192);
+}
+/*moving image
+    .h1{
+        color:transparent;
+        background: url();
+        -webkit-background-clip: text;
+        background-position: 0 0;
+        animation: back 20s linear infinite;
+    }
+    @keyframes back{
+        100%{
+            background-position: 2000px 0;
+        }
+    }
+
+*/
+/*homepage body content*/
+.content{
+    text-align: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    padding: 20px 20px 20px 20px;
+    box-sizing: border-box;
+    border: black 2px;
+    margin: auto;
+    width: 500px;
+    height:auto;
+    
+
+
+
+}
+.content:hover{
+    box-shadow: 0px 0px 20px 0px rgba(254, 253, 255,1);
+
+    
+
+}
+
+.content h2 p1{
+    align-items: center;
+    position: relative;
+    
+}
+h2{
+    font-size: 50px;
+}
+
+/*services tab*/
+.mytabs input[type="radio"]{
+    display: none;
+
+}
+.mytabs{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px auto;
+    padding: 25px;
+    
+
+}
+.mytabs label{
+    background:transparent;
+    font-size: 20px;
+    margin-left:5px;
+    padding: 5px 5px;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+.mytabs .tab{
+    order: 1;
+    display: none;
+    margin-left:5px;
+}
+.mytabs input[type='radio']:checked + label + .tab{
+    display: block;
+
+}
+.mytabs input[type='radio']:checked + label + .tab{
+    background:transparent;
+
+
+
+}
+.mytabs label:hover{
+    box-shadow: 0px 0px 20px 0px rgb(17, 17, 17);
+}
+.mytabs h3{
+    font-size: 50px;
+}
+/*HOVER UPPERCASE
+.mytabs label:hover{
+    transform: scale(1.5);
+}*/
+/*comment box*/
+
+h2{
+    font-size: 20px;
+    margin-bottom: 15px;
+    
+}
+.commentbox{
+    padding: 5px 10px 10px;
+    margin: 0 0% 10% 33%;
+    text-align: left;
+    height: 250px;
+    width: 450px;
+    border: 2px solid white;
+    box-sizing: border-box;
+    
+}
+.commentbox input{
+    outline: none;
+    border-width: 0 0 2px;
+    border-radius: 5px;
+    margin: 0 0 5px 0;
+    height: 20px;
+    width: 40%;
+    border-color: rgb(13, 13, 14);
+    background-image: linear-gradient(white, grey);
+}
+.commentbox input::placeholder{
+    border-color: rgb(13, 13, 14);
+}
+
+.commentbox textarea{
+    background-image: linear-gradient(white, grey);
+    outline: none;
+    border-radius: 5px;
+    resize: none;
+    border-width: 2px 0 2px;
+    margin: 0 0 5px 0;
+    height: 100px;
+    width: 80%;
+    border-color: rgb(13, 13, 14);  
+}
+.commentbox button{
+    border-radius: 5px;
+    border: white;
+    font-size: 15px;
+    width: 70px;
+    cursor: pointer;
+}
+.commentbox button:hover{
+    color: aliceblue;
+    background-color: rgb(165, 152, 152);
+    font-size: 15px;
+    width: 70px;
+    border-color: black;
+}
+
+
+/*about social icon*/
+*{
+    margin:0;
+    padding: 0;
+}
+footer h3{
+    text-align: center;
+}
+.aicon ul{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+
+}
+
+.aicon ul li i{
+    
+    font-size: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .5s;
+}
+.aicon ul li img{
+    
+    height:  20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .5s;
+}
+.aicon ul li{
+    overflow: hidden;
+    position: relative;
+    list-style: none;
+    margin: 0 10px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background-color: aliceblue;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    border: 2px solid;
+
+    transition: .5s;
+}
+.aicon ul li:nth-child(1) i{
+    
+    border-color: blue;
+
+}
+.aicon ul li:nth-child(1){
+    
+    color: blue;
+
+}
+.aicon ul li:nth-child(2) i{
+    
+    border-color: red;
+
+}
+.aicon ul li:nth-child(2){
+    
+    color: red;
+
+}
+.aicon ul li:nth-child(3) i{
+    
+    border-color:#38a1f3;
+
+}
+.aicon ul li:nth-child(3){
+    
+    color: #38a1f3;
+
+}
+.aicon ul li:nth-child(4) i{
+    
+    border-color:#d72888;
+
+}
+.aicon ul li:nth-child(4){
+    
+    color: #d72888;
+
+}
+.aicon ul li:hover:nth-child(1){
+
+    background-color: blue;
+
+}
+.aicon ul li i{
+    left: -50%;
+    opacity: 0;
+
+
+}
+.aicon ul li:hover img{
+    left: -50%;
+    opacity: 0;
+
+
+}
+.aicon ul li:hover:nth-child(1) i{
+    left: 50%;
+    opacity: 1;
+    color: rgb(229, 245, 245);
+
+}
+.aicon ul li:hover:nth-child(2){
+
+    background-color: red;
+
+}
+.aicon ul li:hover:nth-child(2) i{
+    left: 50%;
+    opacity: 1;
+    color: rgb(229, 245, 245);
+
+}
+.aicon ul li:hover:nth-child(3){
+
+    background-color: #38a1f3;
+
+}
+.aicon ul li:hover:nth-child(3) i{
+    left: 50%;
+    opacity: 1;
+    color: rgb(229, 245, 245);
+
+}
+.aicon ul li:hover:nth-child(4){
+
+    background-color: #d72888;
+
+}
+.aicon ul li:hover:nth-child(4) i{
+    left: 50%;
+    opacity: 1;
+    color: rgb(229, 245, 245);
+
+}
+/*mobile view*/
+@media(max-width:600px){
+    nav{
+        justify-content: space-between;
+        display: flex; 
+        padding:2% 6%;
+        align-items: center;
+        margin-left: 2%;
+       
+    }
+    nav h1{
+        font-size: 40px;
+    }
+    nav ul li a{
+        font-size: 15px;
+    }
+    body{
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size:cover;
+        position: relative fixed;
+}
+    .content{
+        width: 300px;
+    }
+    .commentbox{
+        margin: 10% 0% 10% 10%;
+        width: 400px;
+        
+    }
+
+}
